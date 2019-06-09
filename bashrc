@@ -122,6 +122,7 @@ fi
 
 # woods personal alias list
 alias checkup='sudo apt update && apt list --upgradable'
+alias cleanhis="history | sed 's/^[ ]*[0-9]\+[ ]*//'"
 alias cliclock='while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-11));echo -e "\e[32m $(date +%T) \e[39m";tput rc;done &'
 alias dirsize='du -sh */|sort -h'
 alias fahstart='sudo /etc/init.d/FAHClient start'
