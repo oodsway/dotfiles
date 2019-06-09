@@ -120,11 +120,6 @@ if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
 fi
 
-# check for and source .bash_aliases file
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
 # check for and source .bash_functions file
 if [ -f ~/.bash_functions ]; then
     . ~/.bash_functions
