@@ -1,7 +1,6 @@
 # Custom aliases
 alias checkup='sudo apt update && apt list --upgradable'
 alias cleanhis="history | sed 's/^[ ]*[0-9]\+[ ]*//'"
-alias cliclock='while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-11));echo -e "\e[32m $(date +%T) \e[39m";tput rc;done &'
 alias dirsize='du -sh */|sort -h'
 alias gethistory='history > $HOME/bash-history/$(date +%F_%T)'
 alias getsmart='$HOME/bin/cron-smart-status'
@@ -24,6 +23,4 @@ alias simsyncSD1='rsync -n -avrhiO --delete --progress --stats $HOME/.gnupg/ /me
 alias snooze='sudo systemctl suspend'
 alias UTC='date -u'
 alias utc='date -u | awk '\''{printf "%s %s\n", $4, $5}'\'' '
-alias wakecloud='wakeonlan 00:1a:a0:7b:22:7b'
-alias wakeunitylt='wakeonlan 00:23:26:fb:b3:75'
 alias wx='curl wttr.in'
