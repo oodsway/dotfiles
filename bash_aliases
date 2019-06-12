@@ -2,7 +2,7 @@
 alias checkup='sudo apt update && apt list --upgradable'
 alias cleanhis="history | sed 's/^[ ]*[0-9]\+[ ]*//'"
 alias dirsize='du -sh */|sort -h'
-alias gethist='awk '\''!x[$0]++'\'' ~/.bash_history > $HOME/bash-history/$(date +%F_%T)'
+alias gethist='awk '\''!x[$0]++'\'' $HOME/.bash_history > $HOME/bash-history/$(date +%F_%T)'
 alias getsmart='$HOME/bin/cron-smart-status'
 alias getwanip='printf '%s' "WAN IPv4 address is: "; curl ifconfig.es'
 alias gitbashrc='cp $HOME/.bashrc $HOME/github/dotfiles/bashrc'
