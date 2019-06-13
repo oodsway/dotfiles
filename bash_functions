@@ -7,6 +7,17 @@ cdup () {
     cd $(printf "%0.s../" $(seq 1 $i))
 }
 
+goup () {
+# Test for valid number of levels
+    i=${1:-1}
+    max=$(pwd | awk -F/ '{print NF-2}')
+    if [ "$i" -le 0 ] || [ "$i" -gt "$max" ]; then
+        cd $HOME
+    else
+        cd $(printf '%0.s../' $(seq 1 $i))
+    fi
+}
+
 fprhost () {
 # get fingerprint of host(s) prior to ssh
     f=$(mktemp)
