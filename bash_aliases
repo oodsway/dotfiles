@@ -1,7 +1,7 @@
 # Custom aliases
 alias checkup='sudo apt update && apt list --upgradable'
 alias cleanhis="history | sed 's/^[ ]*[0-9]\+[ ]*//'"
-alias dirsize='du -sh */|sort -h'
+alias dirsize='du -sh */ 2>/dev/null | sort -h'
 alias gethist='awk '\''!x[$0]++'\'' ~/.bash_history > ~/bash-history/$(date +%F_%T)'
 alias getsmart='~/bin/cron-smart-status'
 alias getwanip='printf '%s' "WAN IPv4 address is: "; curl ifconfig.es'
