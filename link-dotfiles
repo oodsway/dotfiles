@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+# Date: 2019-06-16
+# Author: Woods Wannamaker
+# Purpose: Backup existing ~/dotfiles and symlink with files in dotfile folder.
+# Source: Modified from
+# https://github.com/flipsidecreations/dotfiles/blob/master/install.sh
+
+
+dotfiles=( ".bash_aliases" ".bash_functions" ".bashrc" ".tmux.conf" ".vimrc" )
+
+main () {
+
+for file in "${dotfiles[@]}"
+do
+    if [ -e ~/"$file" ] && ! [ -h ~/"$file" ]
+    then
+        mv -f ~/"$file"{,.dtbak}
+    fi
+
+    if ! [ -h ~/"$file" ]
+    then
+        ln -s "$PWD"/"$file" ~/"$file"
+    else
+        :
+    fi
+done
+
+}
+
+if [ "$(basename "$PWD")" = "dotfiles" ]
+then
+    main
+else
+    printf "\n%s\n\n" "Error! Run script from the dotfiles directory."
+    exit  
+fi
