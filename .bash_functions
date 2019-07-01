@@ -2,8 +2,9 @@
 
 fprhost () {
 # get fingerprint of host(s) prior to ssh
+    a=$(hostname -I)
     f=$(mktemp)
-    ssh-keyscan ${1:-192.168.3.10} > $f 2>/dev/null
+    ssh-keyscan ${1:-$a} > $f 2>/dev/null
     ssh-keygen -lf $f
     rm -f $f
 }
