@@ -5,7 +5,7 @@ fprhost () {
 # 1st get host ip address: https://stackoverflow.com/questions/21336126
     a=$(ip route get 8.8.8.8 | awk -F"src " 'NR==1{split($2,a," ");print a[1]}')
     f=$(mktemp)
-    ssh-keyscan "${1:-$a}" > "$f" 2>/dev/null
+    ssh-keyscan ${1:-$a} > "$f" 2>/dev/null
     ssh-keygen -lf "$f"
     rm -f "$f"
 }
@@ -20,7 +20,7 @@ fprnet () {
 
 gethist () {
 # save unique commands from ~/.bash_history
-    awk '!x[$0]++' ~/.bash_history > ~/bash-history/"$(date +%F_%T)"
+    awk '!x[$0]++' ~/.bash_history > ~/bash-history/$(date +%F_%T)
 }
 
 goup () {
@@ -30,7 +30,7 @@ goup () {
     if [ "$i" -le 0 ] || [ "$i" -gt "$max" ]; then
         cd "$HOME" || exit
     else
-        cd "$(printf '%0.s../' "$(seq 1 "$i")")" || exit
+        cd $( printf '%0.s../' $(seq 1 "$i") ) || exit
     fi
 }
 
@@ -54,7 +54,7 @@ rccheck () {
 
 rcpurge () {
 # purge uninstalled packages
-    sudo apt-get remove --purge "$( dpkg -l | grep ^rc | awk '{print $2}' | tr '\n' ' ' )"
+    sudo apt-get remove --purge $( dpkg -l | grep ^rc | awk '{print $2}' | tr '\n' ' ' )
 }
 
 utc () {
