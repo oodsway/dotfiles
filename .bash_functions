@@ -3,8 +3,7 @@
 fprhost () {
 # get fingerprint of host(s) prior to ssh
 # 1st get host ip address: https://stackoverflow.com/questions/21336126
-    a=$(hostname -I)
-#    a=$(ip route get 8.8.8.8 | awk -F"src " 'NR==1{split($2,a," ");print a[1]}')
+    a=$(ip route get 8.8.8.8 | awk -F"src " 'NR==1{split($2,a," ");print a[1]}')
     f=$(mktemp)
     ssh-keyscan ${1:-$a} > $f 2>/dev/null
     ssh-keygen -lf $f
