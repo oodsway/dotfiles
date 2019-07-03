@@ -44,7 +44,7 @@ gpgfprfmt () {
 makehist () {
 # create a file containing ALL unique commands in ~/bash-history directory
 # source for awk command: https://stackoverflow.com/questions/11532157/
-    awk '!x[$0]++' ~/bash-history/* | sed 's/^[ ]*[0-9]\+[ ]*//' > allhistory.txt
+    sed 's/^[ ]*[0-9]\+[ ]*//' ~/bash-history/* | awk '!x[$0]++' > allhistory.txt
 }
 
 rccheck () {
