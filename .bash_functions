@@ -30,7 +30,7 @@ goup () {
     if [ "$i" -le 0 ] || [ "$i" -gt "$max" ]; then
         cd "$HOME" || exit
     else
-        cd "$(printf '%0.s../' $(seq 1 "$i"))" || exit
+        cd "$(printf '%0.s../' "$(seq 1 "$i")")" || exit
     fi
 }
 
