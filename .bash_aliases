@@ -1,5 +1,6 @@
 # Custom aliases
 
+alias catfuncs='if [ -f ~/.bash_functions ]; then cat ~/.bash_functions; fi'
 alias checkup='sudo apt update && apt list --upgradable'
 alias cleanhis="history | sed 's/^[ ]*[0-9]\+[ ]*//'"
 alias dirsize='du -sh */ 2>/dev/null | sort -h'
@@ -16,7 +17,6 @@ alias pingmo='~/bin/ping-monet'
 alias pingnet='~/bin/netcheck'
 alias ppalists='apt policy | grep ppa'
 alias rotatevid='ffmpeg -i in.mp4 -vf "transpose=2" out.mp4'
-alias shofuncs='if [ -f ~/.bash_functions ]; then less ~/.bash_functions; fi'
 alias simsyncSD1='rsync -n -avrhiO --delete --progress --stats ~/.gnupg/ /media/woods/cryptSD1/dot_gnupg/'
 alias snooze='sudo systemctl suspend'
 alias wx='curl wttr.in'
