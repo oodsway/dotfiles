@@ -20,3 +20,6 @@ alias rotatevid='ffmpeg -i in.mp4 -vf "transpose=2" out.mp4'
 alias simsyncSD1='rsync -n -avrhiO --delete --progress --stats ~/.gnupg/ /media/woods/cryptSD1/dot_gnupg/'
 alias snooze='sudo systemctl suspend'
 alias wx='curl wttr.in'
+
+# raspberrypi specific
+alias gettemp='sudo vcgencmd measure_temp'
