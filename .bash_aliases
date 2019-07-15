@@ -22,4 +22,4 @@ alias snooze='sudo systemctl suspend'
 alias wx='curl wttr.in'
 
 # raspberrypi specific
-alias gettemp='sudo vcgencmd measure_temp'
+alias gettemp='sudo vcgencmd measure_temp' # only works on Raspberry Pi
