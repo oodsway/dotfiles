@@ -69,7 +69,7 @@ function rccheck () {
 
 function rcpurge () {
 # purge uninstalled packages
-    sudo apt-get remove --purge "$(dpkg -l | grep ^rc | awk '{print $2}' | tr '\n' ' ')"
+    sudo apt-get remove --purge $(dpkg -l | grep ^rc | awk '{print $2}' | tr '\n' ' ')
 }
 
 function shofuncs () {
