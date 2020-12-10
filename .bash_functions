@@ -80,5 +80,5 @@ function shofuncs () {
 
 function utc () {
 # show time in UTC
-    date -u | awk '{printf "%s %s\n", $4, $5 }'
+    date -Ru | awk '{printf "%s %s\n", $4, $5 }'
 }
