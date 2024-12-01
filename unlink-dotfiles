@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Date: 2019-06-30
+# Date: 2019-06-30; 2024-12-01
 # Author: Woods Wannamaker
 # Purpose: restore original dotfiles from backup (.dtbak) file
 # Source: Modified from
@@ -11,12 +11,12 @@ dotfiles=( ".bash_aliases" ".bash_functions" ".bashrc" ".tmux.conf" ".vimrc" )
 main () {
     for file in "${dotfiles[@]}"
     do
-        if [ -h ~/$file ]; then
-        rm -f ~/$file
+        if [ -h ~/"$file" ]; then
+        rm -f ~/"$file"
         fi
         
-        if [ -e ~/${file}.dtbak ]; then
-        mv -f ~/$file{.dtbak,}
+        if [ -e ~/"${file}".dtbak ]; then
+        mv -f ~/"$file"{.dtbak,}
         fi
     done
     printf "\nFiles restored\n\n"
