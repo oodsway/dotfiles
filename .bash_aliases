@@ -1,7 +1,7 @@
 # Custom aliases
 
 alias catfuncs='if [ -f ~/.bash_functions ]; then clear && cat ~/.bash_functions; fi'
-alias catsmart='if [ -f ~/smart_summary.txt ]; then clear && cat ~/smart_summary.txt; fi'
+alias catsmart='if [ -f ~/smart_summary.txt ]; then clear && cat ~/smart_summary.txt | more; fi'
 alias checkup='sudo apt update && apt list --upgradable'
 alias cleanhis="history | sed 's/^[ ]*[0-9]\+[ ]*//'"
 alias dirsize='du -sh */ 2>/dev/null | sort -h'
