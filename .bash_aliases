@@ -2,6 +2,7 @@
 
 alias catfuncs='if [ -f ~/.bash_functions ]; then clear && cat ~/.bash_functions; fi'
 alias catsmart='if [ -f ~/smart_summary.txt ]; then clear && cat ~/smart_summary.txt; fi'
+alias checknet='~/bin/netcheck'
 alias checkup='sudo apt update && apt list --upgradable'
 alias cleanhis="history | sed 's/^[ ]*[0-9]\+[ ]*//'"
 alias dirsize='du -sh */ 2>/dev/null | sort -h'
@@ -17,7 +18,6 @@ alias l.='ls -d .* --color=auto'
 alias ld='ls -d */ --color=auto'
 alias l.l='ls -ld .* --color=auto'
 alias persist='sudo nvidia-smi -pm 1 && nvidia-smi -q | grep -Ei "Persist"'
-alias pingnet='~/bin/netcheck'
 alias ppalists='apt policy | grep ppa'
 alias rotatevid='ffmpeg -i in.mp4 -vf "transpose=2" out.mp4'
 alias simsyncSD1='rsync -n -avrhiO --delete --progress --stats ~/.gnupg/ /media/woods/cryptSD1/dot_gnupg/'
