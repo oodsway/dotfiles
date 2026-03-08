@@ -4,27 +4,26 @@ alias catfuncs='if [ -f ~/.bash_functions ]; then clear && cat ~/.bash_functions
 alias catsmart='if [ -f ~/smart_summary.txt ]; then clear && cat ~/smart_summary.txt; fi'
 alias checknet='~/bin/netcheck'
 alias checkup='sudo apt update && apt list --upgradable'
-alias cleanhis="history | sed 's/^[ ]*[0-9]\+[ ]*//'"
+alias cleanhis="history | sed -e 's/^[ ]*[0-9]\+[ ]*//'"
 alias dirsize='du -sh */ 2>/dev/null | sort -h'
 alias dotbashrc='. ~/.bashrc'
+alias dotalias='. ~/dotfiles/.bash_aliases'
 alias getsmart='~/bin/cron-smart-status'
 alias getwanip='printf '%s' "WAN IPv4 address is: "; curl ifconfig.es'
 alias hdtemps='sudo hddtemp -q /dev/sd{a..z} 2>/dev/null'
 alias isupgrade='do-release-upgrade -c'
 alias ispwned='/home/woods/is_my_password_pwned/./pwned_pass.sh'
-alias launchvm='bash -c "virtualbox >/dev/null 2>/dev/null &"'
 alias lh='ls -1t | head -1'
 alias l.='ls -d .* --color=auto'
 alias ld='ls -d */ --color=auto'
 alias l.l='ls -ld .* --color=auto'
 alias persist='sudo nvidia-smi -pm 1 && nvidia-smi -q | grep -Ei "Persist"'
-alias ppalists='apt policy | grep ppa'
 alias rotatevid='ffmpeg -i in.mp4 -vf "transpose=2" out.mp4'
 alias simsyncSD1='rsync -n -avrhiO --delete --progress --stats ~/.gnupg/ /media/woods/cryptSD1/dot_gnupg/'
 alias snooze='sudo systemctl suspend'
 alias simhome='rsync -n -avhiOu --progress --stats --delete --exclude-from=/home/woods/xlists/x-homesync /home/woods/ /media/woods/Data/home_knix/'
 alias synchome='rsync -avhiOu --progress --stats --delete --exclude-from=/home/woods/xlists/x-homesync /home/woods/ /media/woods/Data/home_knix/'
-
+alias vbox='bash -c "virtualbox >/dev/null 2>/dev/null &"'
 
 # raspberrypi specific
 alias gettemp='sudo vcgencmd measure_temp' # only works on Raspberry Pi
