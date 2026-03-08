@@ -25,5 +25,6 @@ alias snooze='sudo systemctl suspend'
 alias simhome='rsync -n -avhiOu --progress --stats --delete --exclude-from=/home/woods/xlists/x-homesync /home/woods/ /media/woods/Data/home_knix/'
 alias synchome='rsync -avhiOu --progress --stats --delete --exclude-from=/home/woods/xlists/x-homesync /home/woods/ /media/woods/Data/home_knix/'
 
+
 # raspberrypi specific
 alias gettemp='sudo vcgencmd measure_temp' # only works on Raspberry Pi
