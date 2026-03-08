@@ -22,7 +22,8 @@ alias ppalists='apt policy | grep ppa'
 alias rotatevid='ffmpeg -i in.mp4 -vf "transpose=2" out.mp4'
 alias simsyncSD1='rsync -n -avrhiO --delete --progress --stats ~/.gnupg/ /media/woods/cryptSD1/dot_gnupg/'
 alias snooze='sudo systemctl suspend'
-alias wx='curl wttr.in'
+alias simhome='rsync -n -avhiOu --progress --stats --delete --exclude-from=/home/woods/xlists/x-homesync /home/woods/ /media/woods/Data/home_knix/'
+alias synchome='rsync -avhiOu --progress --stats --delete --exclude-from=/home/woods/xlists/x-homesync /home/woods/ /media/woods/Data/home_knix/'
 
 # raspberrypi specific
 alias gettemp='sudo vcgencmd measure_temp' # only works on Raspberry Pi
