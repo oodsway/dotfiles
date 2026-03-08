@@ -1,6 +1,7 @@
 # Custom aliases
 
-alias catfuncs='if [ -f ~/.bash_functions ]; then clear && cat ~/.bash_functions; fi'
+alias catalias='if [ -f ~/.bash_aliases ]; then cat ~/.bash_aliases; fi'
+alias catfuncs='if [ -f ~/.bash_functions ]; then clear && less ~/.bash_functions; fi'
 alias catsmart='if [ -f ~/smart_summary.txt ]; then clear && cat ~/smart_summary.txt; fi'
 alias checknet='~/bin/netcheck'
 alias checkup='sudo apt update && apt list --upgradable'
