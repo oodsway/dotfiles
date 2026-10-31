@@ -4,8 +4,7 @@
 # Author: Woods Wannamaker
 # Purpose: Backup existing ~/dotfiles and symlink with files in dotfile folder.
 # Source: Modified from
-# https://github.com/flipsidecreations/dotfiles/blob/master/install.sh
-
+# https://github.com/lawrencesystems/dotfiles
 
 dotfiles=( ".bash_aliases" ".bash_functions" ".bashrc" ".tmux.conf" ".vimrc" )
 
