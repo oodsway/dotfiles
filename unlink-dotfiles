@@ -5,6 +5,7 @@
 # Purpose: restore original dotfiles from backup (.dtbak) file
 # Source: Modified from
 # https://github.com/lawrencesystems/dotfiles
+# Modified: 2026-10-31
 
 dotfiles=( ".bash_aliases" ".bash_functions" ".bashrc" ".tmux.conf" ".vimrc" )
 
