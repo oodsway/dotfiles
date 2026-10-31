@@ -27,6 +27,7 @@ alias simsyncSD1='rsync -n -avrhiO --delete --progress --stats ~/.gnupg/ /media/
 alias simsyncSD2='rsync -n -avrhiO --delete --progress --stats ~/.gnupg/ /media/woods/cryptSD2/dot_gnupg/'
 alias snooze='sudo systemctl suspend'
 alias simhome='rsync -n -avhiOu --progress --stats --delete --exclude-from=/home/woods/xlists/x-homesync /home/woods/ /media/woods/Data/home_knix/'
+alias stella='stellarium > /dev/null 2>&1 &'
 alias synchome='rsync -avhiOu --progress --stats --delete --exclude-from=/home/woods/xlists/x-homesync /home/woods/ /media/woods/Data/home_knix/'
 alias vbox='bash -c "virtualbox >/dev/null 2>/dev/null &"'
 
